@@ -7,6 +7,10 @@ app=Flask(__name__)
 def saludar():
     return "Hola mundo"
 
+@app.route("/", methods=["GET"])
+def home():
+    return "Hola desde python"
+
 @app.route("/whatsapp", methods=["GET"])
 def verifyToken():
     try:
